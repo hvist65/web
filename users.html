@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user management | payflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <nav class="container">
+        <div class="nav-brand">
+            <img src="logo.jpg" alt="payflow logo" class="logo-img">
+            <span class="brand-name">payflow</span>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li><a href="dashboard.html" class="nav-link">dashboard</a></li>
+            <li><a href="users.html" class="nav-link active">users</a></li>
+            <li><a href="transactions.html" class="nav-link">transactions</a></li>
+            <li><a href="index.html" class="nav-link logout">logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section id="users-management">
+        <header class="section-header">
+            <h2>user management</h2>
+            <a href="create-user.html" class="btn-primary btn-add-user">+ add new user</a>
+        </header>
+
+        <div class="table-responsive">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>username</th>
+                        <th>role</th>
+                        <th>actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>admin_john</td>
+                        <td><span class="badge-admin">admin</span></td>
+                        <td>
+                            <div class="action-group">
+                                <a href="edit-user.html" class="btn-edit">edit</a>
+                                <button class="btn-delete">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>client_alice</td>
+                        <td><span class="badge-user">regular</span></td>
+                        <td>
+                            <div class="action-group">
+                                <a href="edit-user.html" class="btn-edit">edit</a>
+                                <button class="btn-delete">delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

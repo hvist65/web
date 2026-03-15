@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit user | payflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container">
+            <div class="nav-brand">
+                <img src="logo.jpg" alt="payflow logo" class="logo-img">
+                <span class="brand-name">payflow</span>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">dashboard</a></li>
+                <li><a href="users.html" class="nav-link active">users</a></li>
+                <li><a href="transactions.html" class="nav-link">transactions</a></li>
+                <li><a href="index.html" class="nav-link logout">logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="edit-user-section">
+            <div class="edit-card">
+                <h2>edit user: user_jane</h2>
+                
+                <form action="users.html" class="edit-form">
+                    <div class="form-group">
+                        <label for="edit-username">username</label>
+                        <input type="text" id="edit-username" value="user_jane" readonly class="input-readonly">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-email">email address</label>
+                        <input type="email" id="edit-email" value="jane.doe@example.com" readonly class="input-readonly">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-role">change role</label>
+                        <select id="edit-role" name="role" class="simple-select">
+                            <option value="admin">admin</option>
+                            <option value="regular" selected>regular</option>
+                        </select>
+                    </div>
+
+                    <div class="modal-actions">
+                        <a href="users.html" class="btn-cancel">back to list</a>
+                        <button type="submit" class="btn-primary">save changes</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

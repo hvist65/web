@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transactions | payflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <nav class="container">
+        <div class="nav-brand">
+            <img src="logo.jpg" alt="payflow logo" class="logo-img">
+            <span class="brand-name">payflow</span>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li><a href="dashboard.html" class="nav-link">dashboard</a></li>
+            <li><a href="users.html" class="nav-link">users</a></li>
+            <li><a href="transactions.html" class="nav-link active">transactions</a></li>
+            <li><a href="index.html" class="nav-link logout">logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="section-header">
+        <div class="header-text">
+            <h2>my transactions</h2>
+            <p>track your financial activity in real-time</p>
+        </div>
+        <button class="btn-primary" style="width: auto; padding: 10px 25px;">export to pdf</button>
+    </section>
+
+    <div class="table-responsive">
+        <table class="user-table transaction-table">
+            <thead>
+                <tr>
+                    <th>transaction</th>
+                    <th>date & time</th>
+                    <th>amount</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="tx-info">
+                            <span class="tx-icon icon-out">↓</span>
+                            <div>
+                                <strong>starbucks coffee</strong>
+                                <small>shopping & food</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>20 may 2024, 14:30</td>
+                    <td class="amount amount-negative">-$120.00</td>
+                    <td><span class="badge-status completed">success</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tx-info">
+                            <span class="tx-icon icon-in">↑</span>
+                            <div>
+                                <strong>freelance payment</strong>
+                                <small>income</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>19 may 2024, 09:15</td>
+                    <td class="amount amount-positive">+$2,500.00</td>
+                    <td><span class="badge-status completed">received</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard | payflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <nav class="container">
+        <div class="nav-brand">
+            <img src="logo.jpg" alt="payflow logo" class="logo-img">
+            <span class="brand-name">payflow</span>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li><a href="dashboard.html" class="nav-link active">dashboard</a></li>
+            <li><a href="users.html" class="nav-link">users</a></li>
+            <li><a href="transactions.html" class="nav-link">transactions</a></li>
+            <li><a href="index.html" class="nav-link logout">logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main class="container">
+        <section id="transfer-funds">
+            <article class="wallet-info">
+                <h3>your wallet</h3>
+                <p class="balance">$1,240.00</p>
+            </article>
+            
+            <form class="transfer-form">
+                <h3>new transfer</h3>
+                <div class="form-group">
+                    <label for="recipient">recipient username</label>
+                    <input type="text" id="recipient" placeholder="search user...">
+                </div>
+                <div class="form-group">
+                    <label for="amount">amount ($)</label>
+                    <input type="number" id="amount" min="1">
+                </div>
+                <button type="submit" class="btn-success">send money</button>
+            </form>
+        </section>
+        
+    </main>
+
+</body>
+</html>
