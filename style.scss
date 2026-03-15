@@ -1,14 +1,7 @@
 // ==========================================================================
 // 1. VARIABLES & MIXINS (Основа)
 // ==========================================================================
-$color-primary: #a855f7;
-$color-success: #10b981;
-$color-danger: #ef4444;
-$color-bg-dark: #0f172a;
-$color-bg-light: #f8fafc;
-$color-white: #ffffff;
-$color-gray: #94a3b8;
-$font-main: "Inter", "Segoe UI", sans-serif;
+@import '_variables';
 
 @mixin glass-card {
   background: $color-white;
