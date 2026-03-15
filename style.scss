@@ -283,3 +283,81 @@ body {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+// Сітка для карток
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    @include glass-card;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .stat-label { color: $color-gray; font-size: 0.9rem; }
+    .stat-value { font-size: 1.8rem; font-weight: 800; }
+    
+    .progress-bar {
+        height: 8px;
+        background: #f1f5f9;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 10px;
+        
+        .progress {
+            height: 100%;
+            background: $color-primary;
+            border-radius: 10px;
+            &.bg-danger { background: $color-danger; }
+        }
+    }
+}
+
+// Контейнер графіка
+.chart-container {
+    @include glass-card;
+    h3 { margin-bottom: 30px; }
+}
+
+
+
+.css-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 200px;
+    padding-top: 20px;
+    border-bottom: 2px solid #f1f5f9;
+
+    .chart-column {
+        width: 40px;
+        background: linear-gradient(to top, $color-primary, #c084fc);
+        border-radius: 8px 8px 0 0;
+        position: relative;
+        height: var(--height); // Використовуємо CSS зміну з HTML
+        transition: 0.5s ease;
+
+        &:hover {
+            filter: brightness(1.1);
+            cursor: pointer;
+        }
+
+        // Підписи під стовпчиками
+        &::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: $color-gray;
+        }
+    }
+}
+
+.text-success { color: $color-success; }
+.text-danger { color: $color-danger; }

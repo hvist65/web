@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>analytics | payflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <nav class="container">
+        <div class="nav-brand">
+            <img src="images/logo.jpg" alt="payflow logo" class="logo-img">
+            <span class="brand-name">payflow</span>
+        </div>
+        
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span><span></span><span></span>
+        </label>
+
+        <ul class="nav-menu">
+            <li><a href="dashboard.html" class="nav-link">dashboard</a></li>
+            <li><a href="users.html" class="nav-link">users</a></li>
+            <li><a href="analytics.html" class="nav-link active">analytics</a></li>
+            <li><a href="transactions.html" class="nav-link">transactions</a></li>
+            <li><a href="index.html" class="nav-link logout">logout</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="section-header">
+        <h2>financial analytics</h2>
+        <div class="date-filter">last 30 days</div>
+    </section>
+
+    <div class="analytics-grid">
+        <div class="stat-card">
+            <span class="stat-label">total income</span>
+            <span class="stat-value text-success">+$12,450.00</span>
+            <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+        </div>
+        <div class="stat-card">
+            <span class="stat-label">total expenses</span>
+            <span class="stat-value text-danger">-$4,200.00</span>
+            <div class="progress-bar"><div class="progress bg-danger" style="width: 30%"></div></div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <h3>spending by categories</h3>
+        <div class="css-chart">
+            <div class="chart-column" data-label="mon" style="--height: 60%"></div>
+            <div class="chart-column" data-label="tue" style="--height: 40%"></div>
+            <div class="chart-column" data-label="wed" style="--height: 85%"></div>
+            <div class="chart-column" data-label="thu" style="--height: 50%"></div>
+            <div class="chart-column" data-label="fri" style="--height: 95%"></div>
+            <div class="chart-column" data-label="sat" style="--height: 30%"></div>
+            <div class="chart-column" data-label="sun" style="--height: 20%"></div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>
