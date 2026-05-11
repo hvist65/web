@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Students check">
+    <title>test AJAX</title>
+    <script src="script2.js"></script>
+
+    
+</head>
+<body class="auth-page">
+
+    <main class="main-content">
+        <h1>This page shows Students from my API</h1>       
+            <button onclick="showPrewiousStudent()">Previous</button>
+            <button onclick="showNextStudent()">Next</button>
+        <div id="user-name"></div>
+        <h1>Second call of API shows all subjects</h1>
+        <button onclick="ShowSubjects()">Show</button>
+        <div id="subjects"></div>
+        <h1>Third call of API shows teacher</h1>
+        <input type="text" id="teacher-id" placeholder="Введіть ID Вчителя">
+        <button onclick="ShowTeacher(document.getElementById('teacher-id').value)">Get Teacher</button>
+        <div id="teacher"></div>
+    </main>
+
+</body>
+</html>
