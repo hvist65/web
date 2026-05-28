@@ -1,4 +1,3 @@
-
 let CurrentId = 1;
 async function showPrewiousStudent() {
     if (CurrentId <= 1) {
@@ -107,3 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+module.exports = {
+    getCurrentId: () => CurrentId,
+    setCurrentId: (val) => { CurrentId = val; },
+    showPrewiousStudent,
+};
